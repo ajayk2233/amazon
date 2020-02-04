@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="btn btn-primary" value="Validate Data" type="submit">
+</form>
+
+{% endblock %}

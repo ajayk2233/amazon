@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+       <div class="card mb-4 shadow-sm">
+          <p align='center'><b>{{details.product_name}}</b></p>
+          <img class="bd-placeholder-img card-img-top" src="{{details.product_image.url}}" width="700" height="700">
+          <div class="card-body">
+            <p class="card-text"><b>&#8377 {{details.product_price}}</b></p>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-text"><b>{{details.product_desc}}</b></p>
+              <div class="btn-group">
+                <a type="button" href="/Sales/ShowView/{{product.id}}" class="btn btn-sm btn-outline-secondary">Back</a>
+                <a type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</a>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
