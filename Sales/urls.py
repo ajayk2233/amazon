@@ -6,4 +6,7 @@ urlpatterns = [
     path('AddView/', views.AddView.as_view(),name='add'),
     path('DetailsView/<int:id>', views.DetailsView,name='details'),
     path('EditView/<int:pk>',views.EditView.as_view(),name='edit'),
+    path('DeleteView/<int:id>',views.DeleteView,name='delete'),
+    path('signin/',views.signin,name='signin'),
+    path('signout/',views.signout,name='signout'),
 ]
